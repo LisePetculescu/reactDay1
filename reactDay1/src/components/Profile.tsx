@@ -10,7 +10,7 @@ export default function Profile({ email, isActive, name, singleLine }: ProfilePr
     if (singleLine)
       return (
         <p>
-          {name}, {email}, {isActive ? "Aktiv" : "Ikke aktiv"}, {singleLine}
+          <b>{name}</b>, {email}, {isActive ? "Aktiv" : "Ikke aktiv"}, {singleLine}
         </p>
       );
   }
