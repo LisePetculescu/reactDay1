@@ -20,9 +20,10 @@ export default function Profile({ email, isActive, name, singleLine }: ProfilePr
         <p>
           Navn: <b>{name}</b>
         </p>
-        <p>{email}</p>
-        <p>{isActive ? "Aktiv" : "Ikke aktiv"}</p>
-        <br></br>
+        <p>Email: {email}</p>
+        <p>Aktiv: {isActive ? "Ja" : "Nej"}</p>
+        {/* <br></br> */}
+        <hr></hr>
       </div>
     );
   }
