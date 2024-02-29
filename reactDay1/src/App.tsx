@@ -6,6 +6,7 @@ import EventDemo from "./exercises/EventDemo";
 import FormUncontrolled from "./exercises/FormUncontrolled";
 import ContextDemoApp from "./exercises/ContextDemo";
 import StateDemo1 from "./exercises/StateDemo1";
+import StateDemo2 from "./exercises/StateDemo2";
 
 
 
@@ -33,7 +34,8 @@ export default function App() {
             {selectedView == "imgButton" ? <EventDemo title="imgButton"></EventDemo> : null}
             {selectedView == "userForm" ? <FormUncontrolled title="userForm"></FormUncontrolled> : null}
             {selectedView == "contextDemo" ? <ContextDemoApp title="contextDemo"></ContextDemoApp> : null}
-            {selectedView == "stateDemo1" ? <StateDemo1 title="contextDemo"></StateDemo1> : null}
+            {selectedView == "stateDemo1" ? <StateDemo1 title="stateDemo1"></StateDemo1> : null}
+            {selectedView == "stateDemo2" ? <StateDemo2 title="stateDemo2"></StateDemo2> : null}
 
             {/* *Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
@@ -71,6 +73,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("stateDemo1")}>
         State demo 1
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("stateDemo2")}>
+        State demo 2
       </button>
     </>
   );
