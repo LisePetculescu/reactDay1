@@ -8,6 +8,7 @@ import ContextDemoApp from "./exercises/ContextDemo";
 import StateDemo1 from "./exercises/StateDemo1";
 import StateDemo2 from "./exercises/StateDemo2";
 import StateDemo3 from "./exercises/StateDemo3";
+import UseEffectDemo from "./exercises/UseEffect";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -36,6 +37,7 @@ export default function App() {
             {selectedView == "stateDemo1" ? <StateDemo1 title="stateDemo1"></StateDemo1> : null}
             {selectedView == "stateDemo2" ? <StateDemo2 title="stateDemo2"></StateDemo2> : null}
             {selectedView == "stateDemo3" ? <StateDemo3 title="stateDemo3"></StateDemo3> : null}
+            {selectedView == "useEffect" ? <UseEffectDemo title="stateDemo3"></UseEffectDemo> : null}
 
             {/* *Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
@@ -79,6 +81,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("stateDemo3")}>
         State demo 3
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("useEffect")}>
+        UseEffect 
       </button>
     </>
   );
