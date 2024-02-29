@@ -25,4 +25,3 @@ export default function UserForm({ title, onSubmitUser }: UserFormProps) {
     </>
   );
 }
-

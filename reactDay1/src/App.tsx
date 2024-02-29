@@ -4,6 +4,8 @@ import PropsDemo from "./exercises/PropsDemo";
 import ListDemo from "./exercises/ListDemo";
 import EventDemo from "./exercises/EventDemo";
 import FormUncontrolled from "./exercises/FormUncontrolled";
+import ContextDemoApp from "./exercises/ContextDemo";
+
 
 
 export default function App() {
@@ -29,6 +31,7 @@ export default function App() {
             {selectedView == "userTable" ? <ListDemo title="UserTable"></ListDemo> : null}
             {selectedView == "imgButton" ? <EventDemo title="imgButton"></EventDemo> : null}
             {selectedView == "userForm" ? <FormUncontrolled title="userForm"></FormUncontrolled> : null}
+            {selectedView == "contextDemo" ? <ContextDemoApp title="contextDemo"></ContextDemoApp> : null}
 
             {/* *Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
@@ -60,6 +63,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("userForm")}>
         User Form
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("contextDemo")}>
+        Context Demo
       </button>
     </>
   );
